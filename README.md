@@ -62,6 +62,7 @@ Git commands::
     //push file into staging area
       -git add messageInStick.txt
     //push change into branch
+          //-a only works when you wanna edit the same file again
       -git commit -m or/and -a
     //Switch back to master
       -git switch master
