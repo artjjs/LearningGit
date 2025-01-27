@@ -1,4 +1,4 @@
-Git is a project management program for source code.
+#Learn GIT
 From https://antonz.org/git-by-example/:
 ┌──────────────┐         ┌──────────────┐
 │ local        │ push ─> │ remote       │
@@ -15,12 +15,13 @@ out   │ ┌──────────────┐
 │ ├── go.mod   │
 │ └── main.go  │
 └──────────────┘
-Shows file systems and memory used while creating and editing projects.
-Tool commands::
+##Shows file systems and memory used while creating and editing projects.
+###Tool commands::
   -nano text.txt
   -echo text > file.txt or .py or .ect...
   -cat text.txt
-Git commands::
+  -gh auth login
+###Git commands::
   Tool commands:
   //Rename file
     -git mv file.txt message.txt
@@ -38,7 +39,7 @@ Git commands::
     -git init
     -git config user.email@mail.com
     -git congif user.name Name
-  Example::
+  ###Example - all local::
     //Create a repo with a user email and name
       -git init
       -git config user.email@mail.com
@@ -70,3 +71,11 @@ Git commands::
       -git merge stick
     //Take a look at the log
       -git log --oneline --graph --decorate
+###Example - online::
+      //Get logged in to edit from terminal
+            -gh auth login
+      //Now we clone the project 
+            -git clone https://github.com/artjjs/LearningGit.git
+      //We can now cd into the folder and start editing the project.
+      //When we are all done we can push the changes.
+            -git push
