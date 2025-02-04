@@ -57,4 +57,13 @@
    -Login
       -gh auth login
    -Clone your repo you wanna work on
-      -git clone 
+      -git clone https://github.com/artjjs/LearningGit.git
+   -Cd into your cloned project
+      -cd NAMEOFPROJECT
+   -Follow steps
+      - 2
+      - 3
+      - 4
+      - 5
+   -Update your github account
+      -git push
