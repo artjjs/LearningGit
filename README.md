@@ -48,12 +48,15 @@
       - git diff --cached
    -Add your file into your branch
       - git commit -m "Note about commit here."
+      - If you are going to change this file over and over again,
+      - you can skip doing git add file.txt and just do git commit -a
+      - the -a indicates you loaded the file previously just wanna commit it again no loading.
 5. Switch back to your main and merge the branch
    - Switch back to main
       - git switch main
    - Merge your edited branch back into main
       - git merge jackbranch
-6.Now you can replace step 1 with..
+6.Now for projects made online you can replace step 1 with..
    -Login
       -gh auth login
    -Clone your repo you wanna work on
