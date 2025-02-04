@@ -1,6 +1,7 @@
 # :tropical_fish: :fish: :tropical_fish: Learning GIT :tropical_fish: :fish: :tropical_fish:
 > [!NOTE]
 > figure 1.
+## Git structure ::
 
       ┌──────────────┐         ┌──────────────┐
       │ local        │ push ─> │ remote       │
@@ -19,74 +20,50 @@
       └──────────────┘
 > [!NOTE]
 > Sourced from https://antonz.org/git-by-example/:
-## Shows file systems and memory used while creating and editing projects.
 
-- Create a repo with a user email and name, All offline
+## Simple overview :
+1. Create a repo with a user email and name, All offline
+   - Make a local repo
       - git init
-      - git config user.email@mail.com
+   - git config user.email@mail.com
       - git congif user.name Name
-- Create a new text file in the repo
-      - first create using..
-            - nano text.txt
-      - or create using..
-            - echo Hello world > text.txt
-      - then verify..
-            - cat text.txt
-- Add your file into the 'staging area : figure1'
-
-2. Git commands
-   - Rename file
-      - git mv file.txt message.txt
-   - Show working tree/dir
-      - git status
-   - Show commit logs
-      - git log --onefile or/and --graph, --decorate
-   - Show contents of commit
-      - git show HEAD or HEAD~1 or HEAD~2 or HEAD~ect...
-   - Search for text
-      - git grep hello
-   - Push file into staging area
-      - git add file.txt
-   - Check out the Staging area to see our added changes
-   - Check out staging area
-      -git diff --cached
-  ### Example ::
-    //Create a repo with a user email and name
-      -git init
-      -git config user.email@mail.com
-      -git congif user.name Name
-    //You can create a file and push it
-      -echo hello > message.txt
-    //review
-      -cat message.txt
-    //push file into staging area
-      -git add file.txt
-    //Check out staging area
-      -git diff --cached
-    //push change into branch
-      -git commit -m or/and -a
-    //Create a new branch
-      -git branch stick
-    //Switch to the stick branch
-      -get switch stick
-    //You can create a file and push it
-      -echo hello > messageInStick.txt
-    //push file into staging area
-      -git add messageInStick.txt
-    //push change into branch
-          //-a only works when you wanna edit the same file again
-      -git commit -m or/and -a
-    //Switch back to master
-      -git switch master
-    //Change the master branch the same way the stick branch has been changed
-      -git merge stick
-    //Take a look at the log
-      -git log --oneline --graph --decorate
-### Example - online::
-      //Get logged in to edit from terminal
-            -gh auth login
-      //Now we clone the project 
-            -git clone https://github.com/artjjs/LearningGit.git
-      //We can now cd into the folder and start editing the project.
-      //When we are all done we can push the changes.
-            -git push
+2. Create a branch of the project to edit
+   - Create a branch
+      - git branch jackbranch
+   - Switch to your new branch
+      - git switch jackbranch
+   - then you can look at the branch
+      - git log --oneline --graph --decorate
+3. Create a new text file in the branch
+   - first create using..
+      - nano text.txt
+   - or create using..
+      - echo Hello world > text.txt
+   - look at your file's content using..
+      - cat text.txt
+4. Add your file
+   - push into the 'staging area : figure1'
+      - git add text.txt
+   - look at the 'staging area : figure1'
+      - git diff --cached
+   -Add your file into your branch
+      - git commit -m "Note about commit here."
+5. Switch back to your main and merge the branch
+   - Switch back to main
+      - git switch main
+   - Merge your edited branch back into main
+      - git merge jackbranch
+6.Now you can replace step 1 with..
+   -Login
+      -gh auth login
+   -Clone your repo you wanna work on
+      -git clone https://github.com/artjjs/LearningGit.git
+   -Cd into your cloned project
+      -cd NAMEOFPROJECT
+   -Follow steps
+      - 2
+      - 3
+      - 4
+      - 5
+   -Update your github account
+      -git push
