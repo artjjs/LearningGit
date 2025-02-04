@@ -60,10 +60,14 @@
       -git clone https://github.com/artjjs/LearningGit.git
    -Cd into your cloned project
       -cd NAMEOFPROJECT
-   -Follow steps
+   - Follow steps
       - 2
       - 3
       - 4
       - 5
-   -Update your github account
+   - Do a pull to update your local repo copy to the latest update as of this moment
+      - git pull
+   - If you have a Commit Conflit, Check what is conflicting and resolve it
+      - git status
+   - Update your github account
       -git push
