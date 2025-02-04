@@ -1,45 +1,48 @@
-#Learn GIT
-From https://antonz.org/git-by-example/:
-┌──────────────┐         ┌──────────────┐
-│ local        │ push ─> │ remote       │
-│ repo         │ <- pull │ repo         │
-└──────────────┘         └──────────────┘
-check │  ↑↓ commit / reset
-out   │ ┌──────────────┐
-      │ │ staging area │
-      │ └──────────────┘
-      ▽  ↑↓ add / restore
-┌──────────────┐
-│ working tree │
-│ .            │
-│ ├── go.mod   │
-│ └── main.go  │
-└──────────────┘
-##Shows file systems and memory used while creating and editing projects.
-###Tool commands::
-  -nano text.txt
-  -echo text > file.txt or .py or .ect...
-  -cat text.txt
-  -gh auth login
-###Git commands::
-  Tool commands:
-  //Rename file
-    -git mv file.txt message.txt
-  //Show working tree/dir
-    -git status
-  //Show commit logs
-    -git log --onefile or/and --graph, --decorate
-  //show contents of commit
-    -git show HEAD or HEAD~1 or HEAD~2 or HEAD~ect...
-  //Search for text
-    -git grep hello
-  //push file into staging area
-    -git add file.txt
-  //Create a repo with a user email and name
-    -git init
-    -git config user.email@mail.com
-    -git congif user.name Name
-  ###Example - all local::
+# :tropical_fish: :fish: :tropical_fish: Learning GIT :tropical_fish: :fish: :tropical_fish:
+> [!NOTE]
+> Sourced from https://antonz.org/git-by-example/:
+
+      ┌──────────────┐         ┌──────────────┐
+      │ local        │ push ─> │ remote       │
+      │ repo         │ <- pull │ repo         │
+      └──────────────┘         └──────────────┘
+      check │  ↑↓ commit / reset
+      out   │ ┌──────────────┐
+            │ │ staging area │
+            │ └──────────────┘
+            ▽  ↑↓ add / restore
+      ┌──────────────┐
+      │ working tree │
+      │ .            │
+      │ ├── go.mod   │
+      │ └── main.go  │
+      └──────────────┘
+
+## Shows file systems and memory used while creating and editing projects.
+1. Tool commands
+      - nano text.txt
+      - echo text > file.txt or .py or .ect...
+      - cat text.txt
+      - gh auth login
+2. Git commands
+   - Rename file
+      - git mv file.txt message.txt
+   - Show working tree/dir
+      - git status
+   - Show commit logs
+      - git log --onefile or/and --graph, --decorate
+   - Show contents of commit
+      - git show HEAD or HEAD~1 or HEAD~2 or HEAD~ect...
+   - Search for text
+      - git grep hello
+   - Push file into staging area
+      - git add file.txt
+   - Create a repo with a user email and name
+      - git init
+      - git config user.email@mail.com
+      - git congif user.name Name
+
+  ### Example ::
     //Create a repo with a user email and name
       -git init
       -git config user.email@mail.com
@@ -71,7 +74,7 @@ out   │ ┌──────────────┐
       -git merge stick
     //Take a look at the log
       -git log --oneline --graph --decorate
-###Example - online::
+### Example - online::
       //Get logged in to edit from terminal
             -gh auth login
       //Now we clone the project 
