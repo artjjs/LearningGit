@@ -18,6 +18,7 @@
       │ ├── go.mod   │
       │ └── main.go  │
       └──────────────┘
+
 > [!NOTE]
 > Sourced from https://antonz.org/git-by-example/:
 
@@ -56,13 +57,13 @@
       - git switch main
    - Merge your edited branch back into main
       - git merge jackbranch
-6.Now for projects made online you can replace step 1 with..
-   -Login
-      -gh auth login
-   -Clone your repo you wanna work on
-      -git clone https://github.com/artjjs/LearningGit.git
-   -Cd into your cloned project
-      -cd NAMEOFPROJECT
+6. Now for projects made online you can replace step 1 with
+   - Login
+      - gh auth login
+   - Clone your repo you wanna work on
+      - git clone https://github.com/artjjs/LearningGit.git
+   - Cd into your cloned project
+      - cd NAMEOFPROJECT
    - Follow steps
       - 2
       - 3
@@ -73,4 +74,9 @@
    - If you have a Commit Conflit, Check what is conflicting and resolve it
       - git status
    - Update your github account
-      -git push
+      - git push
+7. Couple extra things learned from this first tutorial
+   - Show contents of commit
+      - git show HEAD or HEAD~1 or HEAD~2 or HEAD~ect...
+   - Search for text
+      - git grep hello
