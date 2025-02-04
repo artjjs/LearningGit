@@ -49,9 +49,9 @@
       - git diff --cached
    -Add your file into your branch
       - git commit -m "Note about commit here."
-      - If you are going to change this file over and over again,
-      - you can skip doing git add file.txt and just do git commit -a
-      - the -a indicates you loaded the file previously just wanna commit it again no loading.
+         - If you are going to change this file over and over again,
+         - you can skip doing git add file.txt and just do git commit -a
+         - the -a indicates you loaded the file previously just wanna commit it again no loading.
 5. Switch back to your main and merge the branch
    - Switch back to main
       - git switch main
@@ -72,11 +72,17 @@
    - Do a pull to update your local repo copy to the latest update as of this moment
       - git pull
    - If you have a Commit Conflit, Check what is conflicting and resolve it
-      - git status
+      - The conflict listed the changed file
+         - cat file.txt and review the file it said was in conflict.
+      - now use a modified git command
+         - git checkout --theirs -- file.txt
+            - This allows you to choose if you wanna fight for your edit or choose their edit.
    - Update your github account
       - git push
 7. Couple extra things learned from this first tutorial
    - Show contents of commit
       - git show HEAD or HEAD~1 or HEAD~2 or HEAD~ect...
-   - Search for text
-      - git grep hello
+   - Search for text in the entire working tree
+         - git grep hello
+      - you can even look in a specific commit
+         - git grep hello HEAD~1
